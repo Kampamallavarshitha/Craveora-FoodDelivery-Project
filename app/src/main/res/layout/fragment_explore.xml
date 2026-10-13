@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fd_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="26dp"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_search"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="Search"
+                android:src="@drawable/ic_search"
+                app:tint="@color/fd_orange"/>
+
+            <EditText
+                android:id="@+id/exploreSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search dishes or restaurants"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/fd_text"
+                android:textColorHint="#A0A0A5"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:text="Trending searches"
+        android:textColor="@color/fd_text"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/trendingRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exploreRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_slide_up"
+            android:overScrollMode="never"
+            android:paddingBottom="16dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/exploreProgress"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/fd_orange"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/exploreEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="24dp"
+            android:text="Search for your favourite food 🍽️"
+            android:textColor="@color/fd_subtle"
+            android:textSize="16sp"/>
+    </FrameLayout>
+</LinearLayout>

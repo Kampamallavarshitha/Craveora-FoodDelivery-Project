@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- Decorative Circles -->
+    <View
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/circle_light"
+        android:alpha="0.15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/circle_light"
+        android:alpha="0.12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/profile_icon"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/txtAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crave Now"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="34sp"
+            android:layout_marginTop="18dp"/>
+
+        <TextView
+            android:id="@+id/txtTagLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fresh Food Delivered Fast"
+            android:textColor="#FFF5F5"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:indeterminateTint="@android:color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

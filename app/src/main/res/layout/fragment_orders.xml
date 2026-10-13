@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fd_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="26dp"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Orders"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:alpha="0.9"
+            android:text="Track your food in real time"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_slide_up"
+            android:overScrollMode="never"
+            android:padding="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/ordersEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛍️"
+                android:textSize="56sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="No orders yet"
+                android:textColor="@color/fd_text"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="Add something tasty to your cart\nand place your first order"
+                android:textColor="@color/fd_subtle"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

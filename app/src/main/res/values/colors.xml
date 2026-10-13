@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Food app UI -->
+    <color name="fd_orange">#FC6A1E</color>
+    <color name="fd_orange_light">#FF9A44</color>
+    <color name="fd_bg">#FFF8F3</color>
+    <color name="fd_text">#1C1C1E</color>
+    <color name="fd_subtle">#8E8E93</color>
+
+    <!-- OTP / login screen (restored) -->
+    <color name="card_white">#FFFFFF</color>
+    <color name="brand_purple">#6C3CE9</color>
+    <color name="brand_purple_pressed">#5A2FCB</color>
+    <color name="field_bg">#F5F5F7</color>
+    <color name="field_border">#E0E0E5</color>
+    <color name="field_border_focused">#6C3CE9</color>
+    <color name="otp_image_placeholder">#EEE9FB</color>
+    <color name="otp_card_white">#FFFFFF</color>
+    <color name="otp_text_dark">#1C1C1E</color>
+    <color name="otp_text_muted">#8E8E93</color>
+    <color name="otp_brand_purple">#6C3CE9</color>
+    <color name="otp_text_on_purple">#FFFFFF</color>
+</resources>

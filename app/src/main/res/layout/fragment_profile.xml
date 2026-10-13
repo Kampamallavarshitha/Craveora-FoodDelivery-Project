@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fd_bg"
+    android:clipToPadding="false"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="60dp"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/txtAvatar"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/bg_heart_circle"
+                android:elevation="6dp"
+                android:gravity="center"
+                android:textColor="@color/fd_orange"
+                android:textSize="36sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtProfilePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:alpha="0.9"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Stats card overlapping the header -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="-36dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="18dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStatOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/fd_orange"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Orders"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#EEEEEE"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStatSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="@color/fd_orange"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total spent"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/settingsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="18dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rowEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="✏️"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Edit profile"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="📍"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Delivery address"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/txtAddressValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowNotif"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="🔔"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Notifications"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchNotif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="💬"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Help &amp; support"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="ℹ️"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="About"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="🗑️"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Clear order history"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:background="#F0F0F0"/>
+
+                <LinearLayout
+                    android:id="@+id/rowLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp">
+
+                    <TextView
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:text="🚪"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Log out"
+                        android:textColor="@color/fd_text"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/fd_subtle"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="180dp"
+    android:viewportWidth="200"
+    android:viewportHeight="180">
+
+    <!-- Bowl body -->
+    <path
+        android:fillColor="#F4F2FE"
+        android:strokeColor="#D8D3F7"
+        android:strokeWidth="2"
+        android:pathData="M25,70 C25,130 175,130 175,70 L175,80 C175,138 25,138 25,80 Z" />
+
+    <!-- Bowl rim -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#D8D3F7"
+        android:strokeWidth="2"
+        android:pathData="M25,70 a75,22 0 1,0 150,0 a75,22 0 1,0 -150,0 z" />
+
+    <!-- Toppings -->
+    <path android:fillColor="#FF9F43" android:pathData="M66,62 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 z" />
+    <path android:fillColor="#4CAF7D" android:pathData="M117,58 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 z" />
+    <path android:fillColor="#FF6B6B" android:pathData="M93,72 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0 z" />
+    <path android:fillColor="#6C63FF" android:pathData="M139,68 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 z" />
+    <path android:fillColor="#FFC94A" android:pathData="M54,75 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 z" />
+
+    <!-- Spoon -->
+    <group android:pivotX="175" android:pivotY="120" android:rotation="12">
+        <path android:fillColor="#6C63FF" android:pathData="M172,90 L178,90 L178,150 L172,150 Z" />
+        <path android:fillColor="#6C63FF" android:pathData="M165,80 a10,14 0 1,0 20,0 a10,14 0 1,0 -20,0 z" />
+    </group>
+
+</vector>

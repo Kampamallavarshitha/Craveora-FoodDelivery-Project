@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header: gets top inset in Java so it sits below the status bar / notch -->
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:elevation="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="22dp"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_icon_circle"
+                android:contentDescription="Back"
+                android:padding="9dp"
+                android:src="@drawable/ic_back"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtRestaurantName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.9"
+                    android:text="Fresh • Hot • Delivered fast"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menuRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:layoutAnimation="@anim/layout_slide_up"
+                android:overScrollMode="never"
+                android:paddingBottom="110dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/fd_orange"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="24dp"
+                android:textColor="@color/fd_subtle"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Floating cart bar (animated in/out from Java, gets bottom inset) -->
+    <LinearLayout
+        android:id="@+id/cartBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_cart_bar"
+        android:clickable="true"
+        android:elevation="14dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtCartInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.08"
+            android:text="VIEW CART  ›"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</FrameLayout>

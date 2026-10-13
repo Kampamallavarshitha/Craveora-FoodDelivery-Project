@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fd_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="26dp"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:alpha="0.9"
+            android:text="Pick a cuisine and we'll find it for you"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_slide_up"
+        android:overScrollMode="never"
+        android:padding="13dp"/>
+</LinearLayout>

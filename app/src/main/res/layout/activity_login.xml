@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_top_gradient">
+
+    <!-- Circle Background -->
+    <View
+        android:id="@+id/imageBackdrop"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/circle_bg"
+        android:alpha="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Food Image -->
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/food_logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/imageBackdrop"
+        app:layout_constraintBottom_toBottomOf="@id/imageBackdrop"
+        app:layout_constraintStart_toStartOf="@id/imageBackdrop"
+        app:layout_constraintEnd_toEndOf="@id/imageBackdrop"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Discover Delicious Food"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/imageBackdrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="10dp"
+        android:text="Discover delicious food from the best restaurants around you."
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="@drawable/bottom_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_signup_bg"/>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/signInBtn"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_signin_bg"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

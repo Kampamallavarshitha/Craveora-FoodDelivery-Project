@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtOrderRestaurant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/fd_text"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_pill"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtOrderMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/fd_subtle"
+            android:textSize="12sp"/>
+
+        <ProgressBar
+            android:id="@+id/progressOrder"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="14dp"
+            android:max="100"
+            android:progressBackgroundTint="#EEEEEE"/>
+
+        <TextView
+            android:id="@+id/txtOrderItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#4A4A4F"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="14dp"
+            android:background="#F0F0F0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total paid"
+                android:textColor="@color/fd_subtle"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txtOrderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fd_text"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
